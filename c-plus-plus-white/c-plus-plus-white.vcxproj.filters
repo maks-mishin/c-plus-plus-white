@@ -18,5 +18,8 @@
     <ClCompile Include="queue.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="monthly_cases.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

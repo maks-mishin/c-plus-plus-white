@@ -1,15 +1,17 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
 
-typedef std::vector<std::pair<int, bool>> queue;
+using namespace std;
+typedef std::vector<bool> queue;
 
 void worry(queue& peoples, int index)
 {
 	for (int i = 0; i < peoples.size(); i++)
 	{
 		if(i == index)
-			peoples[i].second = false;
+			peoples[i] = false;
 	}
 }
 
@@ -18,7 +20,7 @@ void quiet(queue& peoples, int index)
 	for (int i = 0; i < peoples.size(); i++)
 	{
 		if (i == index)
-			peoples[i].second = true;
+			peoples[i] = true;
 	}
 }
 
@@ -26,7 +28,7 @@ void come(queue& peoples, int k)
 {
 	for (int i = 0; i < k; i++)
 	{
-		peoples.push_back(std::make_pair(i, true));
+		peoples.push_back(true);
 	}
 }
 
@@ -43,7 +45,7 @@ void worry_count(const queue& peoples)
 	int count = 0;
 	for (int i = 0; i < peoples.size(); i++)
 	{
-		if (peoples[i].second == false)
+		if (peoples[i] == false)
 			count++;
 	}
 	std::cout << count << std::endl;
@@ -78,5 +80,35 @@ void run_queue()
 			remove(peoples, abs(num));
 
 		limit--;
+	}
+}
+
+void run_queue_var_2()
+{
+	int q;
+	cin >> q;
+	vector<bool> is_nervous;
+
+	for (int i = 0; i < q; ++i) {
+		string operation_code;
+		cin >> operation_code;
+
+		if (operation_code == "WORRY_COUNT") {
+			cout << count(begin(is_nervous), end(is_nervous), true) << endl;
+		}
+		else {
+			if (operation_code == "WORRY" || operation_code == "QUIET") {
+				int person_index;
+				cin >> person_index;
+
+				is_nervous[person_index] = (operation_code == "WORRY");
+			}
+			else if (operation_code == "COME") {
+				int person_count;
+				cin >> person_count;
+
+				is_nervous.resize(is_nervous.size() + person_count, false);
+			}
+		}
 	}
 }
