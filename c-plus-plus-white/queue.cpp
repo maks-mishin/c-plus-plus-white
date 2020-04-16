@@ -51,7 +51,7 @@ void worry_count(const queue& peoples)
 	std::cout << count << std::endl;
 }
 
-void run_queue()
+void queue_example()
 {
 	queue peoples;
 	std::string command;
@@ -83,7 +83,7 @@ void run_queue()
 	}
 }
 
-void run_queue_var_2()
+void queue_example_2()
 {
 	int q;
 	cin >> q;

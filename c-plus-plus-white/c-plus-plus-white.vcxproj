@@ -146,6 +146,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="guide_capitals.cpp" />
     <ClCompile Include="monthly_cases.cpp" />
     <ClCompile Include="queue.cpp" />
   </ItemGroup>

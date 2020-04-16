@@ -21,5 +21,8 @@
     <ClCompile Include="monthly_cases.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="guide_capitals.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
