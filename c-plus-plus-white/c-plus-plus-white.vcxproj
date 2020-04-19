@@ -147,8 +147,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="guide_capitals.cpp" />
+    <ClCompile Include="bus_stops.cpp" />
     <ClCompile Include="monthly_cases.cpp" />
     <ClCompile Include="queue.cpp" />
+    <ClCompile Include="temp_main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
