@@ -24,9 +24,6 @@
     <ClCompile Include="guide_capitals.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="temp_main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="bus_stops.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

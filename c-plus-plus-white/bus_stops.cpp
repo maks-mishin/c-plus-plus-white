@@ -3,9 +3,49 @@
 #include <map>
 #include <algorithm>
 #include <string>
+#include <set>
 
 using namespace std;
+
 typedef map<string, vector<string>> routes_list;
+
+void assign_number_bus()
+{
+	int limit;
+	map<vector<string>, int> routes = {};
+
+	cin >> limit;
+	int number_bus = 0;
+
+	for (int i = 0; i < limit; i++)
+	{
+		vector<string> key_stops = {};
+
+		int amount_stops;
+		cin >> amount_stops;
+
+
+		for (int i = 0; i < amount_stops; i++)
+		{
+			string stop;
+			cin >> stop;
+			key_stops.push_back(stop);
+		}
+
+		if (routes.count(key_stops) == true)
+		{
+			cout << "Already exists for " << routes[key_stops] << endl;
+		}
+
+		else
+		{
+			routes[key_stops] = {};
+			number_bus = routes.size();
+			routes[key_stops] = number_bus;
+			cout << "New bus " << routes[key_stops] << endl;
+		}
+	}
+}
 
 void PrintAllBuses(const routes_list& buses_to_stops)
 {
@@ -62,9 +102,9 @@ void PrintBusesForStop(const routes_list& stops_to_buses, const string& stop)
 	}
 }
 
-int main()
+void function_run()
 {
-	int limit, stop_count;
+	int limit;
 	routes_list buses_to_stops = {}, // bus - vector<stop> 
 				stops_to_buses = {}; // stop - vector<bus>
 
@@ -73,7 +113,12 @@ int main()
 	{
 		string command;
 		cin >> command;
-		if (command == "NEW_BUS")
+		
+		if (command == "ALL_BUSES")
+		{
+			PrintAllBuses(buses_to_stops);
+		}
+		else if (command == "NEW_BUS")
 		{
 			string bus;
 			cin >> bus;
@@ -90,7 +135,6 @@ int main()
 				cin >> stop;
 				stops_to_buses[stop].push_back(bus); // update dict stop : vector<bus>
 			}
-
 		}
 		else if (command == "BUSES_FOR_STOP")
 		{
@@ -104,12 +148,6 @@ int main()
 			cin >> bus;
 			PrintStopsForBus(buses_to_stops, stops_to_buses, bus);
 		}
-		else if (command == "ALL_BUSES")
-		{
-			PrintAllBuses(buses_to_stops);
-		}
 		limit--;
 	}
-
-	return 0;
 }
