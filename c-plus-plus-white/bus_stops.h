@@ -1,4 +1,5 @@
-﻿#include <iostream>
+﻿#pragma once
+#include <iostream>
 #include <vector>
 #include <map>
 #include <algorithm>
@@ -7,9 +8,15 @@
 
 using namespace std;
 
-typedef map<string, vector<string>> routes_list;
+using routes_list = map<string, vector<string>>;
 
-void assign_number_bus()
+/*
+Function for assign number to this bus.
+
+If use not vector<string> and set<string> => then all routes will be unique.
+(removing routes, example "a b" if "b a" already exists)
+*/
+void AssignNumberBus()
 {
 	int limit;
 	map<vector<string>, int> routes = {};
@@ -32,7 +39,7 @@ void assign_number_bus()
 			key_stops.push_back(stop);
 		}
 
-		if (routes.count(key_stops) == true)
+		if (routes.count(key_stops))
 		{
 			cout << "Already exists for " << routes[key_stops] << endl;
 		}
@@ -106,14 +113,14 @@ void function_run()
 {
 	int limit;
 	routes_list buses_to_stops = {}, // bus - vector<stop> 
-				stops_to_buses = {}; // stop - vector<bus>
+		stops_to_buses = {}; // stop - vector<bus>
 
 	cin >> limit;
 	while (limit > 0)
 	{
 		string command;
 		cin >> command;
-		
+
 		if (command == "ALL_BUSES")
 		{
 			PrintAllBuses(buses_to_stops);

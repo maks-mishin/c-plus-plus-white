@@ -1,9 +1,10 @@
-﻿/*
-	Programm "Monthly cases"
-	Available option:
-	1. ADD i s (Assign a case with the name s to day i of the current month.)
-	2. DUMP i (Display all cases scheduled for day i of the current month.)
-	3. NEXT (Go to the to-do list for the new month.)
+#pragma once
+/*
+Programm "Monthly cases"
+Available option:
+1. ADD i s (Assign a case with the name s to day i of the current month.)
+2. DUMP i (Display all cases scheduled for day i of the current month.)
+3. NEXT (Go to the to-do list for the new month.)
 */
 
 #include <iostream>
@@ -43,7 +44,7 @@ void next_month(month& current_month, const vector<int>& days_of_months, int& cu
 {
 	int days_current, //amout of days current month
 		days_next; //amout of days next month
-	
+
 	days_current = days_of_months[current_month_num];
 
 	//processing end of year
@@ -60,7 +61,7 @@ void next_month(month& current_month, const vector<int>& days_of_months, int& cu
 
 	// create new month
 	month next_month = {};
-	
+
 	// task size of next month using amount days
 	next_month.resize(days_next);
 
@@ -73,8 +74,8 @@ void next_month(month& current_month, const vector<int>& days_of_months, int& cu
 		}
 
 		//last day of current month
-		vector<string> last_day_next = next_month[next_month.size() - 1]; 
-		
+		vector<string> last_day_next = next_month[next_month.size() - 1];
+
 		//processing last days of current month
 		for (int i = next_month.size(); i < current_month.size(); i++)
 		{

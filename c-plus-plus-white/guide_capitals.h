@@ -1,4 +1,5 @@
-﻿#include <iostream>
+#pragma once
+#include <iostream>
 #include <vector>
 #include <map>
 #include <algorithm>
@@ -13,7 +14,7 @@ void change_capital(map<string, string>& guide, string country, string new_capit
 	{
 		guide[country] = new_capital;
 		cout << "Introduce new country " << country << " with capital " << new_capital << endl;
- 	}
+	}
 
 	// if country already has capital with name "new_capital"
 	else if (guide.count(country) == 1 && guide[country] == new_capital)

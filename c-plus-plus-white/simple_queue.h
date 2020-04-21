@@ -1,16 +1,18 @@
+#pragma once
 #include <iostream>
 #include <vector>
 #include <string>
 #include <algorithm>
 
 using namespace std;
-typedef std::vector<bool> queue;
+
+using queue = std::vector<bool>;
 
 void worry(queue& peoples, int index)
 {
 	for (int i = 0; i < peoples.size(); i++)
 	{
-		if(i == index)
+		if (i == index)
 			peoples[i] = false;
 	}
 }
