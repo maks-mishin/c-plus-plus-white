@@ -13,26 +13,29 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\week_1">
+      <UniqueIdentifier>{6dea51ab-4a2f-44a2-af10-2ed94aab84ae}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="bus_stops.h">
+      <Filter>Header Files\week_1</Filter>
+    </ClInclude>
     <ClInclude Include="dict_synonyms.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="simple_queue.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="monthly_cases.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\week_1</Filter>
     </ClInclude>
     <ClInclude Include="guide_capitals.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\week_1</Filter>
     </ClInclude>
-    <ClInclude Include="bus_stops.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="monthly_cases.h">
+      <Filter>Header Files\week_1</Filter>
+    </ClInclude>
+    <ClInclude Include="simple_queue.h">
+      <Filter>Header Files\week_1</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="test_class.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
