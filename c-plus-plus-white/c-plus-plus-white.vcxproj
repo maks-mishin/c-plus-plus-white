@@ -146,13 +146,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="test_class.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bus_stops.h" />
     <ClInclude Include="dict_synonyms.h" />
     <ClInclude Include="guide_capitals.h" />
     <ClInclude Include="monthly_cases.h" />
+    <ClInclude Include="names.h" />
     <ClInclude Include="simple_queue.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
