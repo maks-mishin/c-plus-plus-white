@@ -19,6 +19,9 @@
     <Filter Include="Header Files\week_2">
       <UniqueIdentifier>{6dea51ab-4a2f-44a2-af10-2ed94aab84ae}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\week_4">
+      <UniqueIdentifier>{f109716c-e73b-4232-b4bf-1857b666c0c6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bus_stops.h">
@@ -39,9 +42,12 @@
     <ClInclude Include="names.h">
       <Filter>Header Files\week_3</Filter>
     </ClInclude>
+    <ClInclude Include="invertible_function.h">
+      <Filter>Header Files\week_4</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="test_class.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

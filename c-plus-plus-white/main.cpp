@@ -4,13 +4,10 @@
 #include <map>
 #include <algorithm>
 #include <set>
-#include <numeric>
 
 using namespace std;
 
-
-int main()
-{
+int main() {
 	
 	return 0;
 }

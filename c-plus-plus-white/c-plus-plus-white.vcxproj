@@ -146,12 +146,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="test_class.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bus_stops.h" />
     <ClInclude Include="dict_synonyms.h" />
     <ClInclude Include="guide_capitals.h" />
+    <ClInclude Include="invertible_function.h" />
     <ClInclude Include="monthly_cases.h" />
     <ClInclude Include="names.h" />
     <ClInclude Include="simple_queue.h" />
