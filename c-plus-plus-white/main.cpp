@@ -1,13 +1,15 @@
 #include <iostream>
+#include <exception>
+#include <sstream>
+#include <cmath>
 #include <string>
-#include <vector>
 #include <map>
-#include <algorithm>
-#include <set>
 
 using namespace std;
 
-int main() {
+int main() 
+{
 	
 	return 0;
 }
+

@@ -153,8 +153,10 @@
     <ClInclude Include="dict_synonyms.h" />
     <ClInclude Include="guide_capitals.h" />
     <ClInclude Include="invertible_function.h" />
+    <ClInclude Include="list_students.h" />
     <ClInclude Include="monthly_cases.h" />
     <ClInclude Include="names.h" />
+    <ClInclude Include="Rational.h" />
     <ClInclude Include="simple_queue.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
