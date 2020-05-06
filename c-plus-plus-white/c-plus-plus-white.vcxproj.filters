@@ -22,6 +22,9 @@
     <Filter Include="Header Files\week_4">
       <UniqueIdentifier>{f109716c-e73b-4232-b4bf-1857b666c0c6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\week_5">
+      <UniqueIdentifier>{3df33ef5-d46c-4385-844d-5d20f5568213}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bus_stops.h">
@@ -51,5 +54,10 @@
     <ClInclude Include="Rational.h">
       <Filter>Header Files\week_4</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Header Files\week_5</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
