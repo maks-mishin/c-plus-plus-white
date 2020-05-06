@@ -7,7 +7,7 @@
 
 using namespace std;
 
-void change_capital(map<string, string>& guide, string country, string new_capital)
+void ChangeCapital(  map<string, string>& guide, string country, string new_capital )
 {
 	// if "country" doesn't exist before this moment
 	if (guide.count(country) == 0)
@@ -28,7 +28,7 @@ void change_capital(map<string, string>& guide, string country, string new_capit
 	}
 }
 
-void rename(map<string, string>& guide, string old_country, string new_country)
+void Rename( map<string, string>& guide, string old_country, string new_country )
 {
 	if (old_country == new_country || guide.count(old_country) == 0 || guide.count(new_country) == 1)
 		cout << "Incorrect rename, skip" << endl;
@@ -42,7 +42,7 @@ void rename(map<string, string>& guide, string old_country, string new_country)
 	}
 }
 
-void about(map<string, string>& guide, string country)
+void About( map<string, string>& guide, string country )
 {
 	if (guide.count(country) == 0)
 		cout << "Country " << country << " doesn't exist" << endl;
@@ -50,7 +50,7 @@ void about(map<string, string>& guide, string country)
 		cout << "Country " << country << " has capital " << guide[country] << endl;
 }
 
-void dump(map<string, string>& guide)
+void Dump( map<string, string>& guide )
 {
 	if (guide.empty() == true)
 	{
@@ -63,7 +63,7 @@ void dump(map<string, string>& guide)
 	}
 }
 
-void main_function()
+void RunExample()
 {
 	int limit = 0;
 	string command, sub_command_1, sub_command_2;
@@ -74,21 +74,21 @@ void main_function()
 	{
 		cin >> command;
 		if (command == "DUMP")
-			dump(guide);
+			Dump(guide);
 		else if (command == "ABOUT")
 		{
 			cin >> sub_command_1;
-			about(guide, sub_command_1);
+			About(guide, sub_command_1);
 		}
 		else if (command == "RENAME")
 		{
 			cin >> sub_command_1 >> sub_command_2;
-			rename(guide, sub_command_1, sub_command_2);
+			Rename(guide, sub_command_1, sub_command_2);
 		}
 		else if (command == "CHANGE_CAPITAL")
 		{
 			cin >> sub_command_1 >> sub_command_2;
-			change_capital(guide, sub_command_1, sub_command_2);
+			ChangeCapital(guide, sub_command_1, sub_command_2);
 		}
 		limit--;
 	}

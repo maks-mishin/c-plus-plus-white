@@ -1,46 +1,37 @@
-#pragma once
-/*
-Programm "Monthly cases"
-Available option:
-1. ADD i s (Assign a case with the name s to day i of the current month.)
-2. DUMP i (Display all cases scheduled for day i of the current month.)
-3. NEXT (Go to the to-do list for the new month.)
-*/
-
+﻿#pragma once
 #include <iostream>
 #include <vector>
 #include <string>
 #include <algorithm>
 
-using namespace std;
-typedef vector<vector<string>> month;
+using month = std::vector<std::vector<std::string>>;
 
-void add_case(month& current_month, string s, int num_day)
+void AddCase( month& current_month, std::string s, int num_day )
 {
 	num_day -= 1;
 	current_month[num_day].push_back(s);
 }
 
-void dump_cases(month& current_month, int num_day)
+void DumpCases( month& current_month, int num_day )
 {
 	num_day -= 1;
-	vector<string> cases_day = current_month[num_day];
-	if (cases_day.empty() == true)
+	std::vector<std::string> daily_cases = current_month[num_day];
+	if (daily_cases.empty() == true)
 	{
-		cout << 0 << endl;
+		std::cout << 0 << std::endl;
 	}
 	else
 	{
-		cout << cases_day.size() << " ";
-		for (int i = 0; i < cases_day.size(); i++)
+		std::cout << daily_cases.size() << " ";
+		for (int i = 0; i < daily_cases.size(); i++)
 		{
-			cout << cases_day[i] << " ";
+			std::cout << daily_cases[i] << " ";
 		}
-		cout << endl;
+		std::cout << std::endl;
 	}
 }
 
-void next_month(month& current_month, const vector<int>& days_of_months, int& current_month_num)
+void NextMonth( month& current_month, const std::vector<int>& days_of_months, int& current_month_num )
 {
 	int days_current, //amout of days current month
 		days_next; //amout of days next month
@@ -74,7 +65,7 @@ void next_month(month& current_month, const vector<int>& days_of_months, int& cu
 		}
 
 		//last day of current month
-		vector<string> last_day_next = next_month[next_month.size() - 1];
+		std::vector<std::string> last_day_next = next_month[next_month.size() - 1];
 
 		//processing last days of current month
 		for (int i = next_month.size(); i < current_month.size(); i++)
@@ -103,10 +94,10 @@ void next_month(month& current_month, const vector<int>& days_of_months, int& cu
 
 }
 
-void main_example()
+void RunExample()
 {
 	// amount of days in months
-	const vector<int> days_of_months{ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+	const std::vector<int> days_of_months{ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
 	int current_month_number = 0; // number of current month in "days_of_months"
 	month current_month(days_of_months[current_month_number]); // create current month
@@ -114,25 +105,25 @@ void main_example()
 	int limit = 0, // amount of avaliable operation
 		index_day = 0; // variable for index of day
 
-	string command, task;
-	cin >> limit;
+	std::string command, task;
+	std::cin >> limit;
 
 	while (limit > 0)
 	{
-		cin >> command;
+		std::cin >> command;
 		if (command == "NEXT")
 		{
-			next_month(current_month, days_of_months, current_month_number);
+			NextMonth(current_month, days_of_months, current_month_number);
 		}
 		else if (command == "DUMP")
 		{
-			cin >> index_day;
-			dump_cases(current_month, index_day);
+			std::cin >> index_day;
+			DumpCases(current_month, index_day);
 		}
 		else if (command == "ADD")
 		{
-			cin >> index_day >> task;
-			add_case(current_month, task, index_day);
+			std::cin >> index_day >> task;
+			AddCase(current_month, task, index_day);
 		}
 		limit--;
 	}

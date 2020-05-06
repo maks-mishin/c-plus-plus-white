@@ -146,9 +146,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="bus_stops.h" />
     <ClInclude Include="dict_synonyms.h" />
     <ClInclude Include="guide_capitals.h" />

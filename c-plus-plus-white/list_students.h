@@ -8,46 +8,60 @@
 
 using namespace std;
 
-/*struct Day
+struct Day
 {
-int value;
-Day(int _value)
-{
-value = _value;
-}
+	int value;
+	explicit Day(int _value)
+	{
+		value = _value;
+	}
 };
 struct Month
 {
-int value;
-Month(int _value)
-{
-value = _value;
-}
+	int value;
+	explicit Month(int _value)
+	{
+		value = _value;
+	}
 };
 struct Year
 {
-int value;
-Year(int _value)
+	int value;
+	explicit Year(int _value)
+	{
+		value = _value;
+	}
+};
+
+struct Date
 {
-value = _value;
-}
-};*/
+	int day;
+	int month;
+	int year;
+
+	Date() {};
+	Date(Day new_day, Month new_month, Year new_year)
+	{
+		day = new_day.value;
+		month = new_month.value;
+		year = new_year.value;
+	}
+};
 
 struct Student
 {
 	string first_name;
 	string last_name;
-	int day;
-	int month;
-	int year;
+	Date date_of_birth;
 
-	Student(string name, string l_name, int _day, int _month, int _year)
+	Student(string f_name, string l_name, Date new_date)
 	{
-		first_name = name;
+		first_name = f_name;
 		last_name = l_name;
-		day = _day;
-		month = _month;
-		year = _year;
+
+		date_of_birth.day = new_date.day;
+		date_of_birth.month = new_date.month;
+		date_of_birth.year = new_date.year;
 	};
 };
 
@@ -63,7 +77,9 @@ void run_example()
 		int day, month, year;
 
 		cin >> name >> last_name >> day >> month >> year;
-		students.push_back({ name, last_name, day, month, year });
+		Date new_date( Day{ day }, Month{ month }, Year{ year } );
+
+		students.push_back({ name, last_name, new_date });
 	}
 
 	cin >> lim_questions;
@@ -83,8 +99,8 @@ void run_example()
 		}
 		else if (command == "date")
 		{
-			cout << students[key - 1].day << "." <<
-				students[key - 1].month << "." << students[key - 1].year << endl;
+			cout << students[key - 1].date_of_birth.day << "." <<
+				students[key - 1].date_of_birth.month << "." << students[key - 1].date_of_birth.year << endl;
 		}
 		else
 		{

@@ -19,7 +19,9 @@ public:
 	}
 	Rational(int numerator, int denominator) {
 		if (denominator == 0)
-			throw 1;
+		{
+			throw invalid_argument("Invalid argument");
+		}
 		else if (denominator < 0) {
 			if (numerator < 0) {
 				denominator = abs(denominator);
@@ -80,7 +82,9 @@ Rational operator * (const Rational& lhs, const Rational& rhs)
 Rational operator / (const Rational& lhs, const Rational& rhs)
 {
 	if (rhs.Numerator() == 0)
-		throw 2;
+	{
+		throw domain_error("Division by zero");
+	}
 	return{ lhs.Numerator()*rhs.Denominator(),
 		rhs.Numerator()*lhs.Denominator() };
 }
@@ -102,11 +106,37 @@ ostream& operator << (ostream& stream, const Rational& rhs)
 	return stream;
 }
 
-bool operator > (Rational a, Rational b) 
+bool operator > (Rational a, Rational b)
 {
 	return (a.Numerator() / (double)a.Denominator()) > double(b.Numerator() / (double)b.Denominator());
 }
-bool operator < (Rational a, Rational b) 
+bool operator < (Rational a, Rational b)
 {
 	return (a.Numerator() / (double)a.Denominator()) < (b.Numerator() / (double)b.Denominator());
+}
+
+void calc()
+{
+	try
+	{
+		Rational r1, r2;
+		char ch;
+		cin >> r1 >> ch >> r2;
+		if (ch == '+')
+			cout << r1 + r2;
+		else if (ch == '-')
+			cout << r1 - r2;
+		else if (ch == '*')
+			cout << r1 * r2;
+		else if (ch == '/')
+			cout << r1 / r2;
+	}
+	catch (const invalid_argument& ex1)
+	{
+		cout << ex1.what() << endl;
+	}
+	catch (const domain_error& ex2)
+	{
+		cout << ex2.what() << endl;
+	}
 }

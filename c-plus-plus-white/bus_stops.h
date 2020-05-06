@@ -11,10 +11,10 @@ using namespace std;
 using routes_list = map<string, vector<string>>;
 
 /*
-Function for assign number to this bus.
+	Function for assign number to this bus.
 
-If use not vector<string> and set<string> => then all routes will be unique.
-(removing routes, example "a b" if "b a" already exists)
+	If use not vector<string> and set<string> => then all routes will be unique.
+	(removing routes, example "a b" if "b a" already exists)
 */
 void AssignNumberBus()
 {
@@ -54,7 +54,7 @@ void AssignNumberBus()
 	}
 }
 
-void PrintAllBuses(const routes_list& buses_to_stops)
+void PrintAllBuses( const routes_list& buses_to_stops )
 {
 	if (buses_to_stops.empty() == true)
 		cout << "No buses" << endl;
@@ -70,7 +70,7 @@ void PrintAllBuses(const routes_list& buses_to_stops)
 	}
 }
 
-void PrintStopsForBus(routes_list& buses_to_stops, routes_list& stops_to_buses, const string& bus)
+void PrintStopsForBus( routes_list& buses_to_stops, routes_list& stops_to_buses, const string& bus )
 {
 	if (buses_to_stops.count(bus) == 0) {
 		cout << "No bus" << endl;
@@ -96,7 +96,7 @@ void PrintStopsForBus(routes_list& buses_to_stops, routes_list& stops_to_buses, 
 	}
 }
 
-void PrintBusesForStop(const routes_list& stops_to_buses, const string& stop)
+void PrintBusesForStop( const routes_list& stops_to_buses, const string& stop )
 {
 	if (stops_to_buses.count(stop) == 0) {
 		cout << "No stop" << endl;
@@ -109,7 +109,7 @@ void PrintBusesForStop(const routes_list& stops_to_buses, const string& stop)
 	}
 }
 
-void function_run()
+void RunExample()
 {
 	int limit;
 	routes_list buses_to_stops = {}, // bus - vector<stop> 
