@@ -1,3 +1,4 @@
+#pragma once
 #include <iomanip>
 #include <iostream>
 #include <map>
@@ -140,7 +141,7 @@ Date ParseDate(const string& date) {
 	return Date(year, month, day);
 }
 
-int main() {
+void RunExample() {
 	try {
 		Database db;
 		string command_line;
@@ -205,5 +206,4 @@ int main() {
 	catch (const exception& e) {
 		cout << e.what() << endl;
 	}
-	return 0;
 }

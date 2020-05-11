@@ -13,51 +13,49 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\week-5">
-      <UniqueIdentifier>{ff5ca1ff-d57e-4aca-8297-5ee269001285}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\week-4">
-      <UniqueIdentifier>{f109716c-e73b-4232-b4bf-1857b666c0c6}</UniqueIdentifier>
+    <Filter Include="Header Files\week-2">
+      <UniqueIdentifier>{49d31e7e-aa5a-48ff-b9bd-0dbb8c5bf587}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\week-3">
-      <UniqueIdentifier>{d0a5d663-2b26-455c-a786-63d0839ab4d4}</UniqueIdentifier>
+      <UniqueIdentifier>{ac08cf24-ebae-466e-b2aa-abad9ec03e85}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\week-2">
-      <UniqueIdentifier>{6dea51ab-4a2f-44a2-af10-2ed94aab84ae}</UniqueIdentifier>
+    <Filter Include="Header Files\week-4">
+      <UniqueIdentifier>{79a64ebc-3038-446d-8239-aec9c5fb1b0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\week-5">
+      <UniqueIdentifier>{34d2d821-0a61-4aaa-86f8-f7dd38d72bc9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="bus_stops.h">
-      <Filter>Header Files\week-2</Filter>
+    <ClInclude Include="week-2\bus_stops.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="dict_synonyms.h">
-      <Filter>Header Files\week-2</Filter>
+    <ClInclude Include="week-2\dict_synonyms.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="guide_capitals.h">
-      <Filter>Header Files\week-2</Filter>
+    <ClInclude Include="week-2\guide_capitals.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="monthly_cases.h">
-      <Filter>Header Files\week-2</Filter>
+    <ClInclude Include="week-2\monthly_cases.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="simple_queue.h">
-      <Filter>Header Files\week-2</Filter>
+    <ClInclude Include="week-2\simple_queue.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="names.h">
-      <Filter>Header Files\week-3</Filter>
+    <ClInclude Include="week-3\names.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="invertible_function.h">
-      <Filter>Header Files\week-4</Filter>
+    <ClInclude Include="week-4\invertible_function.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="list_students.h">
-      <Filter>Header Files\week-4</Filter>
+    <ClInclude Include="week-4\list_students.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Rational.h">
-      <Filter>Header Files\week-4</Filter>
+    <ClInclude Include="week-4\Rational.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="simple_console_db.cpp">
-      <Filter>Header Files\week-5</Filter>
-    </ClCompile>
+    <ClInclude Include="week-5\simple-console-db.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

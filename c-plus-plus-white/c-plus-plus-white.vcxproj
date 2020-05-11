@@ -146,18 +146,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="bus_stops.h" />
-    <ClInclude Include="dict_synonyms.h" />
-    <ClInclude Include="guide_capitals.h" />
-    <ClInclude Include="invertible_function.h" />
-    <ClInclude Include="list_students.h" />
-    <ClInclude Include="monthly_cases.h" />
-    <ClInclude Include="names.h" />
-    <ClInclude Include="Rational.h" />
-    <ClInclude Include="simple_queue.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="simple_console_db.cpp" />
+    <ClInclude Include="week-2\bus_stops.h" />
+    <ClInclude Include="week-2\dict_synonyms.h" />
+    <ClInclude Include="week-2\guide_capitals.h" />
+    <ClInclude Include="week-2\monthly_cases.h" />
+    <ClInclude Include="week-2\simple_queue.h" />
+    <ClInclude Include="week-3\names.h" />
+    <ClInclude Include="week-4\invertible_function.h" />
+    <ClInclude Include="week-4\list_students.h" />
+    <ClInclude Include="week-4\Rational.h" />
+    <ClInclude Include="week-5\simple-console-db.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
